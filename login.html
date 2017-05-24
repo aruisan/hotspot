@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>internet hotspot > login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<style type="text/css">
+body {color: #737373; font-size: 10px; font-family: verdana;}
+
+textarea,input,select {
+	background-color: #FDFBFB;
+	border: 1px solid #BBBBBB;
+	padding: 2px;
+	margin: 1px;
+	font-size: 14px;
+	color: #808080;
+}
+
+a, a:link, a:visited, a:active { color: #AAAAAA; text-decoration: none; font-size: 10px; }
+a:hover { border-bottom: 1px dotted #c1c1c1; color: #AAAAAA; }
+img {border: none;}
+td { font-size: 14px; color: #7A7A7A; }
+
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-family: Arial; font-weight:bold;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+.otic{
+	background-color: rgba(0,0,0, .5);
+}
+</style>
+
+</head>
+
+<body style="background-color: #8EC547">
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+
+<div align="center">
+<a href="$(link-login-only)?target=lv&amp;dst=$(link-orig-esc)">Latviski</a>
+</div>
+
+<center>
+	<div style="width:350px;background-color:#fff; border-radius: 20px;box-shadow: 0 0 15px 0 maroon;">
+		<table width="100%" style="margin-top: 10%;">
+			<tr>
+			<td align="center" valign="middle">
+			<div style="color:red; font-size: 10px"><img src="img/wifi.png"  title="ZONA WIFI GRATIS"><BR/>
+				<B>Inscribte disfruta de Internet totalmente gratis <BR/> 
+				<b>TOTALMENTE GRATIS</b>		
+			</div>
+			<BR/>
+			<center>
+			<table cellpadding="0" cellspacing="0" width="100%" style="background-color:#990000; color:#fff">
+			<tr><td colspan="3"><hr /></td></tr>			
+					<tr>
+					<td style="color: #fff; font-size: 11px" width="45%" align="center"><b>Para utilizar el servicio de internet ALCALDIA-GIRARDOT.</b></td>
+					<td align="right" width="20%">
+					<img src="img/login_user.png" style="width:30px; height:30px; vertical-align:baseline" title="Usuario">&nbsp;&nbsp;</td>
+					<td align="left" width="35%">					
+					<a style="color: #fff;font-size: 12px; height:25px" href="http://190.27.198.178/" class="btn"><b>Haz Clic aquí</b>
+				</a>
+				</td>
+				<tr><td colspan="3"><hr /></td></tr>
+			</table>
+			</center>
+			<div style="color: #c1c1c1; font-size: 9px">
+				<h3>Tambien puedes visitarnos en nuestros portales:</h3>
+			</div>
+			<div width="100%">		
+				<a href="http://girardot-cundinamarca.gov.co/"><img src="img/GIRARDOT.jpg" width="200px"></a>	
+				<a href="http://eventosgirardot-cundinamarca.gov.co/"><img src="img/eventos.png" width="100px"></a>		
+			</div>
+			<div width="100%" class="otic">			
+				<a href="http://ticsgirardot-cundinamarca.gov.co/"><img src="img/otic- girardot.png" width="300px"></a>
+			</div>
+			$(if error)<br /><div style="color: #FF8080; font-size: 9px">$(error)</div>$(endif)
+			</td>
+			</tr>
+		</table>
+	</div>
+</center>
+
+<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>
+</body>
+</html>
